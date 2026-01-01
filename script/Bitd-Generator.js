@@ -3,6 +3,7 @@
 // @author       叁崎
 // @version      1.0.0
 // @description  根据核心书内容编写的npc、场景、刻痕生成器，使用.bitd查看指令帮助
+// @timestamp    2025-12-31
 // @homepageURL  https://github.com/bizarreLiny/sealdice-script/blob/main/script/Bitd-Generator.js
 // @license      MIT
 // ==/UserScript==
@@ -272,6 +273,7 @@ cmdBitd.solve = function (ctx, msg, cmdArgs) {
 
 // 注册指令
 ext.cmdMap['bitd'] = cmdBitd;
+
 
 
 
