@@ -150,7 +150,7 @@ cmdBitd.help = `暗夜刀锋生成器 (v1.0)
 cmdBitd.solve = function (ctx, msg, cmdArgs) {
     const arg = cmdArgs.getArgN(1);
     const count = parseCount(cmdArgs);
-    const split = `============\n`;
+    const split = `=============\n`;
 
     switch (arg){
         case "h":
@@ -273,6 +273,7 @@ cmdBitd.solve = function (ctx, msg, cmdArgs) {
 
 // 注册指令
 ext.cmdMap['bitd'] = cmdBitd;
+
 
 
 
