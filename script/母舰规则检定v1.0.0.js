@@ -67,8 +67,7 @@ const mstemplate = {
   textMapHelpInfo: null,
 };
 var helpTexts = {
-  main: `母舰TRPG相关指令
-母舰TRPG相关指令：
+  main: `母舰TRPG相关指令：
 .set ms //切换母舰规则模式
 .sn ms //自动更改群名片
 .ms <数量> //生成母舰角色（默认1次,最多10次）
@@ -77,7 +76,6 @@ var helpTexts = {
 .rm 死亡 //进行死亡豁免
 .rmb/p <属性/豁免> //进行优势[+]/劣势[-]检定
 .mp //进行惊恐检定
-均可使用@进行代骰检定
 均可使用@进行代骰检定
 `,
 rm:`母舰属性/豁免检定：
@@ -445,3 +443,4 @@ ext.cmdMap["rm"] = cmdRm;
 ext.cmdMap["rmb"] = cmdRmb;
 ext.cmdMap["rmp"] = cmdRmp;
 ext.cmdMap["mp"] = cmdMp;
+
