@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         母舰规则检定
 // @author       叁崎
-// @version      1.0.0
+// @version      1.0.1
 // @description  母舰TRPG规则插件，支持完整的角色卡录入、检定、自动压力计算等功能，使用 .ms help 获取帮助。
-// @timestamp    2026-01-14
+// @timestamp    2026-01-18
 // @license      MIT
 // @homepageURL  https://github.com/bizarreLiny/sealdice-script
 // ==/UserScript==
@@ -443,4 +443,5 @@ ext.cmdMap["rm"] = cmdRm;
 ext.cmdMap["rmb"] = cmdRmb;
 ext.cmdMap["rmp"] = cmdRmp;
 ext.cmdMap["mp"] = cmdMp;
+
 
