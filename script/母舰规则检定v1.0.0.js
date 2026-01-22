@@ -154,16 +154,16 @@ function makeCheck(ctx, value, dice) {
   const simpleMode = seal.vars.intGet(ctx, '$g简易开关')[0];
 
   
-  let text = " ";
+  let text = "  ";
   if (isCriticalSuccess(dice, check)) {
-    text = simpleMode == 1 ? seal.formatTmpl(ctx, "COC:判定_简短_大成功"):seal.formatTmpl(ctx, "COC:判定_大成功");
+    text += simpleMode == 1 ? seal.formatTmpl(ctx, "COC:判定_简短_大成功"):seal.formatTmpl(ctx, "COC:判定_大成功");
   } else if (isCriticalFailure(dice, check)) {
-    text = simpleMode == 1 ? seal.formatTmpl(ctx, "COC:判定_简短_大失败"):seal.formatTmpl(ctx, "COC:判定_大失败");
+    text += simpleMode == 1 ? seal.formatTmpl(ctx, "COC:判定_简短_大失败"):seal.formatTmpl(ctx, "COC:判定_大失败");
     
   } else if (dice <= check) {
-    text = simpleMode == 1 ? seal.formatTmpl(ctx, "COC:判定_简短_成功_普通"):seal.formatTmpl(ctx, "COC:判定_成功_普通");
+    text += simpleMode == 1 ? seal.formatTmpl(ctx, "COC:判定_简短_成功_普通"):seal.formatTmpl(ctx, "COC:判定_成功_普通");
   } else {
-    text = simpleMode == 1 ? seal.formatTmpl(ctx, "COC:判定_简短_失败"):seal.formatTmpl(ctx, "COC:判定_失败");
+    text += simpleMode == 1 ? seal.formatTmpl(ctx, "COC:判定_简短_失败"):seal.formatTmpl(ctx, "COC:判定_失败");
   }
   return text;
 }
@@ -321,7 +321,7 @@ const solveCheck = (ctx, msg, cmdArgs, mode) => {
     
   const stressText = handleStress(mctx, isFailure,isRest,finalDice);
   
-  const reply = isRest?`${playerName}的休息豁免：${processText}${resultText}${stressText}`:`${playerName}的“${val}”检定：${processText}${resultText}${stressText}`;
+  const reply = isRest?`${playerName}的休息豁免：${processText}${resultText}${stressText}`:`${playerName}的"${val}"检定：${processText}${resultText}${stressText}`;
     
   seal.replyToSender(ctx, msg, reply);
   return seal.ext.newCmdExecuteResult(true);
@@ -443,5 +443,6 @@ ext.cmdMap["rm"] = cmdRm;
 ext.cmdMap["rmb"] = cmdRmb;
 ext.cmdMap["rmp"] = cmdRmp;
 ext.cmdMap["mp"] = cmdMp;
+
 
 
