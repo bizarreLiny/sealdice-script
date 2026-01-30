@@ -4,7 +4,7 @@
 // @version      1.0.0
 // @description  根据核心书内容编写的npc、场景、刻痕生成器，使用.bitd查看指令帮助
 // @timestamp    2025-12-31
-// @homepageURL  https://github.com/bizarreLiny/sealdice-script/tree/main/script
+// @homepageURL  https://github.com/bizarreLiny/sealdice-script/
 // @license      MIT
 // ==/UserScript==
 
@@ -185,7 +185,7 @@ cmdBitd.solve = function (ctx, msg, cmdArgs) {
                 let text = `=== 室内场景 ===\n`;
                 
                 for (let i = 1; i <= count; i++){
-                    text += (Math.random() < 0.7)?`【用途】${randFromTable(SCENE_ID, "用途普遍")}\n`:`【用途】${randFromTable(SCENE_ID, "用途少见")}`;
+                    text += (Math.random() < 0.7)?`【用途】${randFromTable(SCENE_ID, "用途普遍")}\n`:`【用途】${randFromTable(SCENE_ID, "用途少见")}\n`;
                     text += `【外墙材料】${randFromTable(SCENE_ID, "外墙材料")}\n`;
                     text += `【外墙细节】${randFromTable(SCENE_ID, "外墙细节")}\n`;
                     text += `【细节】${randFromTable(SCENE_ID, "细节")}\n`;
@@ -273,3 +273,4 @@ cmdBitd.solve = function (ctx, msg, cmdArgs) {
 
 // 注册指令
 ext.cmdMap['bitd'] = cmdBitd;
+
